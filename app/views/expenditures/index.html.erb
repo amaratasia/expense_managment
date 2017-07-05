@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Expenditures</h2><br>
+
+<table border=1 class="half_screen">
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Category</th>
+      <th>Created At</th>
+      <th colspan="3">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%if @expenditures.present? %>
+      <% @expenditures.each do |expenditure| %>
+        <tr>
+          <td><%= expenditure.amount %></td>
+          <td><%= expenditure.category.name %></td>
+          <td><%= expenditure.created_at.to_date %></td>
+          <td><%= link_to 'Show', expenditure %></td>
+          <td><%= link_to 'Edit', edit_expenditure_path(expenditure) %></td>
+          <td><%= link_to 'Destroy', expenditure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    <%else%>
+      <tr>
+        <td colspan="4">No Data Found</td>
+      </tr>
+    <%end%>    
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Expenditure', new_expenditure_path %> |
+<%= link_to "Download PDF", { :action => "index", :format => :pdf }, target: '_blank'%> |
+<%= link_to "Download CSV", { :action => "index", :format => :csv }, target: '_blank'%>

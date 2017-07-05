@@ -1,0 +1,30 @@
+<h1>New Income</h1>
+
+<%= form_for(@income) do |f| %>
+	<% if @income.errors.any? %>
+		<div id="error_explanation">
+		  <h2><%= pluralize(@income.errors.count, "error") %> prohibited this income from being saved:</h2>
+		  <ul>
+		    <% @income.errors.full_messages.each do |message| %>
+		    	<li><%= message %></li>
+		    <% end %>
+		  </ul>
+		</div>
+	<% end %>
+	<div class="field">
+	  <%= f.label :amount %>
+	  <%= f.number_field :amount, :required => true,  min: 1  %>
+	</div>
+	<div id="category">
+	  <%= f.fields_for :category, Category.new do |fact| %>
+	  <%= fact.label :category %>
+	  <%= fact.collection_select "name", Category.all, :name, :name  %>
+	  <% end %>
+	</div>
+	<br>
+
+	<div class="actions">
+	  <%= f.submit %>
+	</div>
+<% end %>
+<%= link_to 'Back', incomes_path %>

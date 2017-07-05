@@ -1,0 +1,14 @@
+th, table tr td {
+text-align: center;
+}
+
+.full_screen {
+	width: 100%
+}
+.half_screen {
+	width: 50%
+}
+
+.large_font  {
+    font-size: medium;
+}

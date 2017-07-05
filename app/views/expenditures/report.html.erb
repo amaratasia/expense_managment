@@ -1,0 +1,19 @@
+<h1 style="text-align: center;"><strong>Expenditure Report</strong></h1>
+<table style="height: 40px; margin-left: auto; margin-right: auto;" width="100%" border='1'>
+	<tbody>
+	<tr>
+		<th>Amount</th>
+		<th>Category</th>
+		<th>Created at</th>
+	</tr>
+
+	<tbody>
+		<% expenditure_data.each do |expenditure| %>
+		  <tr>
+		    <td style="text-align: center;"><%= expenditure.amount %></td>
+		    <td style="text-align: center;"><%= expenditure.category.name %></td>
+		    <td style="text-align: center;"><%= expenditure.created_at.to_date %></td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>

@@ -1,0 +1,21 @@
+<h1 style="text-align: center;"><strong>Bank Statement</strong></h1>
+<table style="height: 40px; margin-left: auto; margin-right: auto;" width="100%" border='1'>
+	<tbody>
+	<tr>
+		<th>Category</th>
+		<th>Amount</th>
+		<th>Type</th>
+		<th>Created at</th>
+	</tr>
+
+	<tbody>
+		<% complete_data.each do |data| %>
+		  <tr>
+		    <td style="text-align: center;"><%= data['category_name'] %></td>
+		    <td style="text-align: center;"><%= data['amount'] %></td>
+		    <td style="text-align: center;"><%= data['type'] %></td>
+		    <td style="text-align: center;"><%= data['created_at'].to_date %></td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>
