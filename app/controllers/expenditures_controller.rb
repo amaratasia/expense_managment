@@ -2,7 +2,7 @@ class ExpendituresController < ApplicationController
   before_action :set_expenditure, only: [:show, :edit, :update, :destroy]
 
   def index
-    @expenditures = Expenditure.includes(:category).where(:user_id=>current_user.id)
+    @expenditures = current_user.expenditures.includes(:category)
     respond_to do |format|
       format.html
       format.pdf do

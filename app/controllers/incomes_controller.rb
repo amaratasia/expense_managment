@@ -2,7 +2,7 @@ class IncomesController < ApplicationController
   before_action :set_income, only: [:show, :edit, :update, :destroy]
 
   def index
-    @incomes = Income.includes(:category).where(:user_id=>current_user.id)
+    @expenditures = current_user.incomes.includes(:category)
     respond_to do |format|
       format.html
       format.pdf do

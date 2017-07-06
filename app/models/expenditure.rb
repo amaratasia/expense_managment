@@ -1,6 +1,8 @@
 class Expenditure < ApplicationRecord
 	has_one :category_mapping, as: :categorizable
 	has_one :category, as: :categorizable, through: :category_mapping
+	belongs_to :user
+
 	validates :amount, numericality: {greater_than: 0 }, presence: true
 
 	accepts_nested_attributes_for :category

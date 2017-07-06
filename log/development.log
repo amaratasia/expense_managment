@@ -20815,3 +20815,36 @@ Sent data bank_statment.pdf (3.3ms)
 Completed 200 OK in 2522ms (Views: 0.9ms | ActiveRecord: 3.0ms)
 
 
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mIncome Load (32.3ms)[0m  [1m[34mSELECT `incomes`.* FROM `incomes` WHERE `incomes`.`user_id` = 1[0m
+  [1m[36mIncome Load (3.1ms)[0m  [1m[34mSELECT  `incomes`.* FROM `incomes` ORDER BY `incomes`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mIncome Load (1.7ms)[0m  [1m[34mSELECT `incomes`.* FROM `incomes` WHERE `incomes`.`user_id` = 1[0m
+  [1m[36mCategoryMapping Load (14.3ms)[0m  [1m[34mSELECT `category_mappings`.* FROM `category_mappings` WHERE `category_mappings`.`categorizable_type` = 'Income' AND `category_mappings`.`categorizable_id` = 1[0m
+  [1m[36mCategory Load (16.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1[0m
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mExpenditure Load (15.2ms)[0m  [1m[34mSELECT `expenditures`.* FROM `expenditures` WHERE `expenditures`.`user_id` = 1[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mIncome Load (1.3ms)[0m  [1m[34mSELECT `incomes`.* FROM `incomes` WHERE `incomes`.`user_id` = 1[0m
+  [1m[36mCategoryMapping Load (1.9ms)[0m  [1m[34mSELECT `category_mappings`.* FROM `category_mappings` WHERE `category_mappings`.`categorizable_type` = 'Income' AND `category_mappings`.`categorizable_id` = 1[0m
+  [1m[36mCategory Load (3.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mIncome Load (2.2ms)[0m  [1m[34mSELECT `incomes`.* FROM `incomes` WHERE `incomes`.`user_id` = 1[0m
+  [1m[36mCategoryMapping Load (3.5ms)[0m  [1m[34mSELECT `category_mappings`.* FROM `category_mappings` WHERE `category_mappings`.`categorizable_type` = 'Income' AND `category_mappings`.`categorizable_id` = 1[0m
+  [1m[36mCategory Load (6.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mIncome Load (0.7ms)[0m  [1m[34mSELECT `incomes`.* FROM `incomes` WHERE `incomes`.`user_id` = 1[0m
+  [1m[36mCategoryMapping Load (0.8ms)[0m  [1m[34mSELECT `category_mappings`.* FROM `category_mappings` WHERE `category_mappings`.`categorizable_type` = 'Income' AND `category_mappings`.`categorizable_id` = 1[0m
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mIncome Load (0.8ms)[0m  [1m[34mSELECT `incomes`.* FROM `incomes` WHERE `incomes`.`user_id` = 1[0m
+  [1m[36mCategoryMapping Load (1.5ms)[0m  [1m[34mSELECT `category_mappings`.* FROM `category_mappings` WHERE `category_mappings`.`categorizable_type` = 'Income' AND `category_mappings`.`categorizable_id` = 1[0m
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1[0m
+  [1m[36mExpenditure Load (0.9ms)[0m  [1m[34mSELECT `expenditures`.* FROM `expenditures` WHERE `expenditures`.`user_id` = 1[0m
+  [1m[36mIncome Load (21.9ms)[0m  [1m[34mSELECT `incomes`.* FROM `incomes`[0m
